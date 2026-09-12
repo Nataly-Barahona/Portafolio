@@ -1,12 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nataly Barahona - Desarroladora full stack</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Nataly Barahona</div>
+    <nav class="nav-links">
+      <a href="#home">Inicio</a>
+      <a href="#about">Acerca de</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contacts">Contacto</a>
+    </nav>
+    <div class="font-controls">
+      <button class="font-btn" data-action="decrease" aria-label="Achicar letra">A-</button>
+      <button class="font-btn" data-action="increase" aria-label="Agrandar letra">A+</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="hello-tag">Hola.</span>
+      <h1>Soy Nataly 👋</h1>
+      <h2>Desarroladora full stack</h2>
+      <div class="hero-buttons">
+        <a href="#contacts" class="btn primary-btn">Contactame</a>
+        <a href="#resume" class="btn secondary-btn">Descargar cv</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="image-frame">
+        <img id="fotoPerfil" src="/img/img.png" alt="Nataly Barahona">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill -->
+  <div class="tech-bar">
+    <span>HTML5</span>
+    <img src="/img/html5.png" alt="HTML5 Logo" class="tech-logo">
+    <span>CSS</span>
+    <img src="/img/css3.png" alt="CSS3 Logo" class="tech-logo">
+    <span>Javascript</span>
+    <img src="/img/javascript.png" alt="Javascript Logo" class="tech-logo">
+    <span>Node.js</span>
+    <img src="/img/nodejs.png" alt="Node.js Logo" class="tech-logo">
+    <span>React</span>
+    <img src="/img/react.png" alt="React Logo" class="tech-logo">
+    <span>Git</span>
+    <img src="/img/git.png" alt="Git Logo" class="tech-logo">
+    <span>Github</span>
+    <img src="/img/github.png" alt="Github Logo" class="tech-logo">
+    <span>java</span>
+    <img src="/img/java.png" alt="Java Logo" class="tech-logo">
+  </div>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-left">
+      <div class="service-item">
+        <i class="fa-solid fa-code"></i>
+        <div>
+          <h3>---</h3>
+        </div>
+      </div>
+      <div class="service-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div>
+          <h3>----</h3>
+        </div>
+      </div>
+      <div class="service-item">
+        <i class="fa-solid fa-server"></i>
+        <div>
+          <h3>---</h3>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <h2>Acerca de mi</h2>
+      <p>Desarrolladora Junior Full-Stack con enfoque en Java 🚀
+        Mi camino hacia la programación comenzó desde un lugar diferente: procesos, datos, reportes y análisis.
+        Trabajando con problemas reales descubrí que no solo quería encontrar oportunidades de mejora, también quería
+        crear las herramientas que ayudaran a solucionarlas.
+        Así pasé de preguntarme "¿cómo podemos mejorar esto?" a preguntarme "¿y si lo programamos?".
+        Me gusta investigar, aprender, probar nuevas ideas y convertir desafíos en soluciones funcionales. Durante mi
+        formación he desarrollado habilidades en Java, desarrollo Full-Stack, bases de datos y control de versiones con
+        Git, creando proyectos donde combino lógica, creatividad y organización.
+        Creo que la programación es más que escribir código: es entender necesidades, resolver problemas y construir
+        experiencias útiles.
+        Este portafolio representa mi proceso de crecimiento, los proyectos que he creado y los retos que me siguen
+        formando como desarrolladora.</p>
+      <div class="stats-container">
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Proyectos</h2>
+    <div class="section-divider">!</div>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-info">
+        <h3>Hotel Huellitas</h3>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>Javascript</span><span>Node.js</span>
+        </div>
+        <p>Aplicación web interactiva desarrollada para la gestión integral de reservas y la búsqueda de disponibilidad
+          en un hotel especializado en el cuidado de mascotas. El proyecto combina una interfaz amigable e intuitiva con
+          herramientas eficientes para optimizar la experiencia de los usuarios y administradores.</p>
+        <div class="project-links">
+          <a href="#" class="btn primary-btn">Ver Github</a>
+          <a href="#" class="btn-text">Demo<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-preview terminal-preview">
+        <img src="/img/hotel.png" alt="Hotel Huellitas Preview" class="project-image">
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card reverse">
+      <div class="project-info">
+        <h3>Planificación de Tareas</h3>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>Javascript</span><span>API</span><span>Version control</span>
+        </div>
+        <p>Planificador de Tareas es una aplicación web intuitiva diseñada para organizar las actividades diarias,
+          optimizar la gestión del tiempo y mejorar la productividad personal o en equipo.</p>
+        <div class="project-links">
+          <a href="#" class="btn primary-btn">Ver Github</a>
+          <a href="#" class="btn-text">Demo<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-preview image-preview">
+        <div class="img-mockup"></div>
+        img src="/img/planificador.png" alt="Planificación de Tareas Preview" class="project-image">
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-info">
+        <h3>Friticos</h3>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>Javascript</span><span>Node.js</span>
+        </div>
+        <p>Friticos Colombia es una landing page interactiva inspirada en la gastronomía tradicional colombiana,
+          desarrollada en el marco de una hackathon en la cual obtuvo el 3er puesto.
+
+          Descripción general
+          Una propuesta web dinámica y atractiva que rinde homenaje a los fritos típicos del país, combinando un diseño
+          visual llamativo con una experiencia de usuario fluida y temática.</p>
+        <div class="project-links">
+          <a href="#" class="btn primary-btn">Ver Github</a>
+          <a href="#" class="btn-text">Demo<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-preview terminal-preview">
+        <img src="/img/friticos.png" alt="Friticos Preview" class="project-image">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Contacts Section -->
+  <section class="contacts" id="contacts">
+    <div class="contact-left">
+      <span class="contact-subtitle">Contacto</span>
+      <h2>¿Tienes un proyecto?<br>¡Hablemos!</h2>
+      <a href="#" class="btn primary-btn">Enviar</a>
+    </div>
+    <div class="contact-right">
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Nataly Barahona</h3>
+    <p></p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const interruptorTema = document.getElementById('themeToggle');
+    const fotoPerfil = document.getElementById('fotoPerfil');
+    const temaGuardado = localStorage.getItem('theme');
+    const botonesLetra = document.querySelectorAll('.font-btn');
+    const raiz = document.documentElement;
+    let tamañoActual = 16;
+
+    function aplicarTema(tema) {
+      const esModoClaro = tema === 'light';
+      document.body.classList.toggle('dark-mode', !esModoClaro);
+      fotoPerfil.src = esModoClaro ? 'Retrato2modo diurno.png' : 'Retrato2.png';
+      interruptorTema.textContent = esModoClaro ? '🌙' : '☀️';
+      interruptorTema.setAttribute('aria-label', esModoClaro ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+    }
+
+    function ajustarTamañoLetra(accion) {
+      if (accion === 'increase') {
+        tamañoActual += 1;
+      } else if (accion === 'decrease') {
+        tamañoActual -= 1;
+      }
+
+      if (tamañoActual < 12) tamañoActual = 12;
+      if (tamañoActual > 24) tamañoActual = 24;
+
+      raiz.style.fontSize = `${tamañoActual}px`;
+    }
+
+    if (temaGuardado) {
+      aplicarTema(temaGuardado);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      aplicarTema('dark');
+    }
+
+    interruptorTema.addEventListener('click', () => {
+      const siguienteTema = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+      localStorage.setItem('theme', siguienteTema);
+      aplicarTema(siguienteTema);
+    });
+
+    botonesLetra.forEach((boton) => {
+      boton.addEventListener('click', () => ajustarTamañoLetra(boton.dataset.action));
+    });
+  </script>
+
 </body>
+
 </html>
