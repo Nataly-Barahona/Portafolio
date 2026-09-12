@@ -94,7 +94,14 @@ body.dark-mode footer {
     gap: 16px;
     padding: 24px 8%;
     background-color: var(--bg-header);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
 }
+
 
 .logo {
     font-weight: bold;
