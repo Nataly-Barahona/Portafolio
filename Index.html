@@ -40,29 +40,22 @@
     </div>
     <div class="hero-image">
       <div class="image-frame">
-        <img id="fotoPerfil" src="/img/img.png" alt="Nataly Barahona">
+        <img id="fotoPerfil" src="img/Retrato2.png" alt="Nataly Barahona">
       </div>
     </div>
   </section>
 
   <!-- Skill -->
   <div class="tech-bar">
-    <span>HTML5</span>
-    <img src="/img/html5.png" alt="HTML5 Logo" class="tech-logo">
-    <span>CSS</span>
-    <img src="/img/css3.png" alt="CSS3 Logo" class="tech-logo">
-    <span>Javascript</span>
-    <img src="/img/javascript.png" alt="Javascript Logo" class="tech-logo">
-    <span>Node.js</span>
-    <img src="/img/nodejs.png" alt="Node.js Logo" class="tech-logo">
-    <span>React</span>
-    <img src="/img/react.png" alt="React Logo" class="tech-logo">
-    <span>Git</span>
-    <img src="/img/git.png" alt="Git Logo" class="tech-logo">
-    <span>Github</span>
-    <img src="/img/github.png" alt="Github Logo" class="tech-logo">
-    <span>java</span>
-    <img src="/img/java.png" alt="Java Logo" class="tech-logo">
+  
+    <img src="img/html.png" alt="HTML5 Logo" class="tech-logo">
+    <img src="img/css.png" alt="CSS3 Logo" class="tech-logo">
+    <img src="img/javascript.png" alt="Javascript Logo" class="tech-logo">
+    <img src="img/node.png" alt="Node.js Logo" class="tech-logo">
+    <img src="img/mongos.png" alt="MongoDB Logo" class="tech-logo">
+    <img src="img/git.png" alt="Git Logo" class="tech-logo">
+    <img src="img/github.png" alt="Github Logo" class="tech-logo">
+    <img src="img/java.png" alt="Java Logo" class="tech-logo">
   </div>
 
   <!-- About Section -->
@@ -128,7 +121,7 @@
         </div>
       </div>
       <div class="project-preview terminal-preview">
-        <img src="/img/hotel.png" alt="Hotel Huellitas Preview" class="project-image">
+        <img src="img/hotel.png" alt="Hotel Huellitas Preview" class="project-image">
       </div>
     </div>
 
@@ -148,7 +141,7 @@
       </div>
       <div class="project-preview image-preview">
         <div class="img-mockup"></div>
-        img src="/img/planificador.png" alt="Planificación de Tareas Preview" class="project-image">
+        <img src="img/planificador.png" alt="Planificación de Tareas Preview" class="project-image">
       </div>
     </div>
 
@@ -171,7 +164,7 @@
         </div>
       </div>
       <div class="project-preview terminal-preview">
-        <img src="/img/friticos.png" alt="Friticos Preview" class="project-image">
+        <img src="img/friticos.png" alt="Friticos Preview" class="project-image">
       </div>
     </div>
 
@@ -204,51 +197,7 @@
     </div>
   </footer>
 
-  <script>
-    const interruptorTema = document.getElementById('themeToggle');
-    const fotoPerfil = document.getElementById('fotoPerfil');
-    const temaGuardado = localStorage.getItem('theme');
-    const botonesLetra = document.querySelectorAll('.font-btn');
-    const raiz = document.documentElement;
-    let tamañoActual = 16;
-
-    function aplicarTema(tema) {
-      const esModoClaro = tema === 'light';
-      document.body.classList.toggle('dark-mode', !esModoClaro);
-      fotoPerfil.src = esModoClaro ? 'Retrato2modo diurno.png' : 'Retrato2.png';
-      interruptorTema.textContent = esModoClaro ? '🌙' : '☀️';
-      interruptorTema.setAttribute('aria-label', esModoClaro ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
-    }
-
-    function ajustarTamañoLetra(accion) {
-      if (accion === 'increase') {
-        tamañoActual += 1;
-      } else if (accion === 'decrease') {
-        tamañoActual -= 1;
-      }
-
-      if (tamañoActual < 12) tamañoActual = 12;
-      if (tamañoActual > 24) tamañoActual = 24;
-
-      raiz.style.fontSize = `${tamañoActual}px`;
-    }
-
-    if (temaGuardado) {
-      aplicarTema(temaGuardado);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      aplicarTema('dark');
-    }
-
-    interruptorTema.addEventListener('click', () => {
-      const siguienteTema = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-      localStorage.setItem('theme', siguienteTema);
-      aplicarTema(siguienteTema);
-    });
-
-    botonesLetra.forEach((boton) => {
-      boton.addEventListener('click', () => ajustarTamañoLetra(boton.dataset.action));
-    });
-  </script>
+  <script src="app.js"></script>
 
 </body>
 
