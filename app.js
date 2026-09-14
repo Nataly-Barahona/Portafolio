@@ -11,18 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // === LÓGICA DE TEMA (MODO OSCURO / CLARO) ===
     function aplicarTema(tema) {
         const esModoClaro = tema === 'light';
-        
-        // Añade 'dark-mode' si NO es modo claro (es decir, si es oscuro)
+
         document.body.classList.toggle('dark-mode', !esModoClaro);
-        
-        // Cambia la foto solo si el elemento existe en la página actual
+
         if (fotoPerfil) {
             fotoPerfil.src = esModoClaro ? 'img/Retrato2modo diurno.png' : 'img/Retrato2.png';
         }
-        
-        // Cambia el texto del botón solo si existe
+
         if (interruptorTema) {
-            interruptorTema.textContent = esModoClaro ? '☀️' : '🌙';
+            interruptorTema.textContent = esModoClaro ? '🌙' : '☀️';
             interruptorTema.setAttribute('aria-label', esModoClaro ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
         }
     }
@@ -39,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         interruptorTema.addEventListener('click', () => {
             const esOscuro = document.body.classList.contains('dark-mode');
             const siguienteTema = esOscuro ? 'light' : 'dark';
-            
+
             localStorage.setItem('theme', siguienteTema);
             aplicarTema(siguienteTema);
         });
