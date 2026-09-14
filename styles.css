@@ -326,7 +326,7 @@ body.dark-mode .font-btn {
 /* Tech Bar */
 .tech-bar {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 14px;
@@ -338,7 +338,14 @@ body.dark-mode .font-btn {
     border-bottom: 1px solid var(--border);
     margin-bottom: 60px;
     cursor: pointer;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-bar::-webkit-scrollbar {
+    display: none;
 }
 
 .tech-bar span {
@@ -364,7 +371,7 @@ body.dark-mode .font-btn {
     object-fit: contain;
     display: inline-Block;
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
-    margin: 48px;
+    margin: 28px;
     transition: transform 0.3s ease-in-out;
     animation: floatLogo 3.2s ease-in-out infinite;
 }
@@ -842,14 +849,14 @@ body.dark-mode .font-btn {
         }
 
         .tech-bar {
-            padding: 20px 5%;
+            padding: 10px 5%;
             gap: 8px;
         }
 
         .tech-bar .tech-logo {
             width: 54px;
             height: 84px;
-            margin: 10px;
+            margin: 5px;
         }
 
         .about,
