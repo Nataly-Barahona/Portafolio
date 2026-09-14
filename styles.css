@@ -65,6 +65,7 @@ body {
     background-color: var(--bg-body);
     color: var(--text-muted);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .btn {
@@ -768,51 +769,75 @@ body.dark-mode .font-btn {
 
     /* responsive - móviles */
     @media (max-width: 650px) {
+        body {
+            overflow-x: hidden;
+        }
+
         .header {
             flex-wrap: wrap;
             justify-content: center;
-            padding: 15px 5%;
+            padding: 12px 4%;
+            gap: 8px;
         }
 
         .logo {
             width: 100%;
             text-align: center;
+            order: 1;
         }
 
         .nav-links {
-            gap: 12px;
+            order: 3;
+            width: 100%;
+            gap: 8px 12px;
             flex-wrap: wrap;
             justify-content: center;
         }
 
         .nav-links a {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .font-controls {
+            order: 2;
             gap: 8px;
+            margin-right: 0;
+            margin-left: 0;
         }
 
         .hero {
             flex-direction: column-reverse;
             text-align: center;
-            padding: 180px 5% 50px;
+            padding: 190px 5% 50px;
+        }
+
+        .hero-content {
+            align-items: center;
+            width: 100%;
         }
 
         .hero-content h1 {
-            font-size: 2.3rem;
+            font-size: clamp(2rem, 9vw, 2.8rem);
         }
 
         .hero-content h2 {
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 5vw, 1.5rem);
         }
 
         .image-frame {
-            width: 210px;
-            height: 210px;
+            width: 180px;
+            height: 180px;
         }
 
         .hero-buttons {
+            justify-content: center;
+            width: 100%;
+        }
+
+        .hero-buttons .btn,
+        .hero-buttons .btn-text {
+            width: 100%;
+            max-width: 220px;
             justify-content: center;
         }
 
@@ -822,9 +847,9 @@ body.dark-mode .font-btn {
         }
 
         .tech-bar .tech-logo {
-            width: 70px;
-            height: 100px;
-            margin: 20px;
+            width: 54px;
+            height: 84px;
+            margin: 10px;
         }
 
         .about,
@@ -840,6 +865,7 @@ body.dark-mode .font-btn {
         }
 
         .stats-container {
+            grid-template-columns: 1fr;
             gap: 25px;
         }
 
@@ -847,11 +873,13 @@ body.dark-mode .font-btn {
             margin-bottom: 55px;
         }
 
+        .social-icons {
+            gap: 12px;
+        }
+
         .theme-toggle {
-            right: 18px;
-            bottom: 18px;
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
         }
     }
 
