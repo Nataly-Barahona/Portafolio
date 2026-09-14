@@ -127,8 +127,8 @@ body {
     align-items: center;
     gap: 16px;
     padding: 18px 8%;
-    background: rgba(11, 19, 23, 0.9);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 253, 249, 0.9);
+    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     left: 0;
@@ -137,6 +137,13 @@ body {
     flex-wrap: nowrap;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 6px 18px rgba(41, 37, 42, 0.08);
+}
+
+body.dark-mode .header {
+    background: rgba(11, 19, 23, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
 }
 
 
@@ -177,9 +184,9 @@ body {
 }
 
 .font-btn {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--bg-soft);
     color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--border);
     border-radius: 12px;
     width: 42px;
     height: 42px;
@@ -226,6 +233,7 @@ body.dark-mode .theme-toggle {
 body.dark-mode .font-btn {
     background-color: var(--white-bone);
     color: #29252a;
+    border-color: rgba(255, 255, 255, 0.18);
 }
 
 /* Hero Section */
