@@ -20,24 +20,6 @@ Este proyecto es una landing page moderna y adaptable que incluye:
 - CSS3
 - JavaScript
 - Git y GitHub
-
-## Estructura del proyecto
-
-```text
-Portafolio/
-├── Index.html
-├── styles.css
-├── app.js
-├── README.md
-├── img/
-│   ├── Retrato2.png
-│   ├── Retrato2modo diurno.png
-│   ├── Video1.mp4
-│   ├── Video2.mp4
-│   ├── video.mp4
-└── PDF/
-    └── CV.pdf
-
 ## Características principales
 
 - Diseño responsivo
@@ -67,3 +49,21 @@ https://www.figma.com/design/3PrCJgHRMEBnWV6zS1VN9Q/El-equipo-de-nnbarahonam-tea
 
 ## Link desplegado
 https://nataly-barahona.github.io/Portafolio/
+
+
+## Estructura del proyecto
+
+```text
+Portafolio/
+├── Index.html
+├── styles.css
+├── app.js
+├── README.md
+├── img/
+│   ├── Retrato2.png
+│   ├── Retrato2modo diurno.png
+│   ├── Video1.mp4
+│   ├── Video2.mp4
+│   ├── video.mp4
+└── PDF/
+    └── CV.pdf
